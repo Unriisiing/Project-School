@@ -1,0 +1,52 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+h2{
+    color: purple;
+}
+h1{
+    color: purple;
+}
+
+
+.box {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 calc(50% - 20px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    max-width: calc(50% - 20px);
+    height: 300px; /* Set a fixed height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.user, .job-application, .advertisement, .company{
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.button-container a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: purple;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.button-container a:hover {
+    background-color: plum;
+}

@@ -1,0 +1,311 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: white;
+    color: blueviolet;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header ul li {
+    margin: 0 10px;
+}
+
+header ul li a {
+    color: blueviolet;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.content-container {
+    display: flex;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    overflow: hidden;
+    width: 90%;
+    height: 70vh;
+    /* Adjust the width as needed */
+}
+
+.filter-section {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px;
+    /* Add rounded corners */
+    margin: 10px;
+    /* Add some margin for spacing */
+    background-color: #f4f4f4;
+    /* Set background color */
+}
+
+.ads-section {
+    flex: 4;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Added */
+    max-height: 70vh;
+    /* Set a maximum height for the ads section */
+    overflow-y: auto;
+    /* Enable vertical scrolling if content overflows */
+}
+
+.card {
+    flex: 1 1 calc(33.33% - 20px);
+    /* Adjusted flex value and max-width */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    max-width: calc(33.33% - 20px);
+    /* Adjusted max-width */
+    transition: flex 0.3s;
+    /* Add transition for smooth animation */
+}
+
+.card.expanded {
+    flex: 1 1 100%;
+    /* Expanded card takes full width */
+    max-width: 100%;
+    /* Adjusted max-width */
+    margin: 10px 0;
+    /* Added margin to center the expanded card */
+}
+
+.info-box {
+    padding: 10px;
+    border-radius: 10px;
+    height: max-content;
+    /* Rounded corners */
+    background-color: #fff;
+    /* Background color for the info box */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Optional: Add shadow for depth */
+}
+
+.additional-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.info,
+.map-box {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    /* Rounded corners */
+    background-color: white;
+    /* Background color for the boxes */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Optional: Add shadow for depth */
+}
+
+.map-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.company-map {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    /* Rounded corners */
+}
+
+
+
+
+.bx-crosshair {
+    font-size: 24px;
+    color: purple;
+    cursor: pointer;
+}
+
+.bx-crosshair:hover {
+    color: blue;
+}
+
+.bx-exit {
+    font-size: 24px;
+    color: purple;
+    cursor: pointer;
+}
+
+.bx-exit:hover {
+    color: blue;
+}
+
+.info h3 {
+    margin: 0;
+    font-size: 20px;
+    color: blueviolet;
+    margin-bottom: 10px;
+}
+
+.info p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.info p strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.info p:last-child {
+    margin-bottom: 0;
+}
+
+.info .apply-button {
+    font-size: 24px;
+    color: purple;
+    cursor: pointer;
+}
+
+.info .apply-button:hover {
+    background-color: #45a049;
+}
+
+.info-box h3 {
+    margin: 0;
+    font-size: 20px;
+    color: blueviolet;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.info-box button.learn-more {
+    font-size: 16px;
+    padding: 5px 10px;
+    background-color: #ab00ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-tout {
+    display: flex;
+    justify-content: center;
+    padding-top: 20vh;
+}
+
+.popup-content {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+.popup-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: blueviolet;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: #434b9c;
+}
+
+.popup input[type="text"],
+.popup input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.popup input[type="submit"] {
+    background-color: blueviolet;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup input[type="submit"]:hover {
+    background-color: #434b9c;
+}
+
+
+.apply-button {
+    border: none; /* Ajoutez cette ligne pour supprimer la bordure du bouton */
+}
