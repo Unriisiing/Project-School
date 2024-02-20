@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  backend:
+    image: backend-image:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app/backend  
+    environment:
+      - DEBUG=True
+      - DATABASE_URL=postgres://user:password@db:5432/db_name  
+
+  frontend:
+    image: frontend-image:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./frontend:/app/frontend 
+    depends_on:
+      - backend  
